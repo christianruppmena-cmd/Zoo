@@ -20,8 +20,12 @@ public class Main {
         zoo.alleGeraeuscheMachen();
 
 
+        Gehege loewenGehege = new Gehege("Löwengehege");
+        System.out.println(loewenGehege.getName());
 
 
+        loewenGehege.tierHinzufuegen(simba);
+        loewenGehege.alleTiereAnzeigen();
 
     }
 }
