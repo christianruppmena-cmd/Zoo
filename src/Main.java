@@ -7,25 +7,26 @@ public class Main {
         Affe charly = new Affe("Charly", 4);
         Baer balu = new Baer("Balu", 7);
 
+        Gehege loewenGehege = new Gehege("Löwengehege");
+        Gehege elefantenGehege = new Gehege("Elefantengehege");
+        Gehege affenGehege = new Gehege("Affengehege");
+        Gehege baerenGehege = new Gehege("Bärengehege");
+
+        loewenGehege.tierHinzufuegen(simba);
+        elefantenGehege.tierHinzufuegen(dumbo);
+        affenGehege.tierHinzufuegen(charly);
+        baerenGehege.tierHinzufuegen(balu);
+
         Zoo zoo = new Zoo();
 
-        zoo.tierHinzufuegen(simba);
-        zoo.tierHinzufuegen(dumbo);
-        zoo.tierHinzufuegen(charly);
-        zoo.tierHinzufuegen(balu);
-
+        zoo.gehegeHinzufuegen(loewenGehege);
+        zoo.gehegeHinzufuegen(elefantenGehege);
+        zoo.gehegeHinzufuegen(affenGehege);
+        zoo.gehegeHinzufuegen(baerenGehege);
 
 
         zoo.alleTiereAnzeigen();
         zoo.alleGeraeuscheMachen();
-
-
-        Gehege loewenGehege = new Gehege("Löwengehege");
-        System.out.println(loewenGehege.getName());
-
-
-        loewenGehege.tierHinzufuegen(simba);
-        loewenGehege.alleTiereAnzeigen();
 
     }
 }

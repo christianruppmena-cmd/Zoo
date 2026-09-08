@@ -21,4 +21,9 @@ public class Gehege {
             tier.anzeigen();
         }
     }
+    public void alleGeraeuschMachen(){
+        for(Tier tier : tiere){
+            tier.geraeuschMachen();
+        }
+    }
 }
