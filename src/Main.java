@@ -1,6 +1,9 @@
+import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
         Loewe simba = new Loewe("Simba", 5);
         Elefant dumbo = new Elefant("Dumbo",12);
@@ -27,6 +30,34 @@ public class Main {
 
         zoo.alleTiereAnzeigen();
         zoo.alleGeraeuscheMachen();
+
+        System.out.println("========================");
+        System.out.println("        MEIN ZOO");
+        System.out.println("========================");
+        System.out.println("1. Alle Tiere anzeigen");
+        System.out.println("2. Alle Geräusche");
+        System.out.println("3. Programm beenden");
+        System.out.print("Bitte wählen: ");
+
+        int auswahl = scanner.nextInt();
+        switch (auswahl) {
+            case 1 :
+                zoo.alleTiereAnzeigen();
+                break;
+
+            case 2 :
+                zoo.alleGeraeuscheMachen();
+                break;
+
+            case 3 :
+                System.out.println("Zoo wird beendet.");
+
+            default:
+                System.out.println("Ungültige auswahl !");
+        }
+
+
+
 
     }
 }
