@@ -46,4 +46,14 @@ public class Gehege {
             tier.fuettern();
         }
     }
+    public Tier tierSuchen(String gesuchterName) {
+        for (Tier tier : tiere) {
+            if (tier.getName().equalsIgnoreCase(gesuchterName)) {
+                return tier;
+            }
+        }
+
+        return null;
+    }
+
 }
