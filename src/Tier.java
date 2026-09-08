@@ -1,14 +1,14 @@
-public class Tier {
+public abstract class Tier {
     private String name;
     private String art;
     private int alter;
-    private String geraeusch;
 
-    Tier(String name, String art, int alter, String geraeusch){
+
+    public Tier(String name, String art, int alter){
         this.name = name;
         this.art = art;
         this.alter = alter;
-        this.geraeusch = geraeusch;
+
     }
 
     void anzeigen(){
@@ -17,10 +17,8 @@ public class Tier {
         System.out.println("Art: " + art);
         System.out.println("Alter: " + alter);
     }
+     public abstract void geraeuschMachen();
 
-    void geraeuschMachen(){
-        System.out.println(name + " macht: " + geraeusch);
-    }
     // Getter und Setter
 
 
@@ -52,11 +50,5 @@ public class Tier {
         }
     }
 
-    public String getGeraeusch() {
-        return geraeusch;
-    }
 
-    public void setGeraeusch(String geraeusch) {
-        this.geraeusch = geraeusch;
-    }
 }

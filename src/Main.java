@@ -34,7 +34,7 @@ public class Main {
 
         int auswahl = 0;
 
-        while (auswahl !=3) {
+        while (auswahl !=4) {
             System.out.println("========================");
             System.out.println("        MEIN ZOO");
             System.out.println("========================");

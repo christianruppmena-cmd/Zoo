@@ -1,6 +1,6 @@
 public class Affe extends Tier{
     public Affe(String name, int alter){
-        super(name,"Affe",alter,"UH UH AH AH!");
+        super(name,"Affe",alter);
     }
     @Override
     public void geraeuschMachen(){
