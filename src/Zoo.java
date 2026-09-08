@@ -19,4 +19,10 @@ public class Zoo {
             gehege.alleGeraeuschMachen();
         }
     }
+
+    void alleGehegeAnzeigen(){
+        for (Gehege gehege : this.gehege){
+            gehege.kurzAnzeigen();
+        }
+    }
 }

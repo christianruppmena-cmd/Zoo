@@ -21,6 +21,14 @@ public class Gehege {
             tier.anzeigen();
         }
     }
+
+    public void kurzAnzeigen(){
+        System.out.println("Gehege: " + name);
+
+        for (Tier tier : tiere){
+            System.out.println(" - " + tier.getName());
+        }
+    }
     public void alleGeraeuschMachen(){
         for(Tier tier : tiere){
             tier.geraeuschMachen();

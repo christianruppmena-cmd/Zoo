@@ -39,7 +39,8 @@ public class Main {
             System.out.println("========================");
             System.out.println("1. Alle Tiere anzeigen");
             System.out.println("2. Alle Geräusche");
-            System.out.println("3. Programm beenden");
+            System.out.println("3. Gehege anzeigen");
+            System.out.println("4. Programm beenden");
             System.out.print("Bitte wählen: ");
 
             auswahl = scanner.nextInt();
@@ -53,6 +54,11 @@ public class Main {
                     break;
 
                 case 3:
+                    zoo.alleGehegeAnzeigen();
+                    break;
+
+
+                case 4:
                     System.out.println("Zoo wird beendet.");
                     break;
 
