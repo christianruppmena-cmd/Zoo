@@ -75,10 +75,14 @@ public class Main {
                     System.out.print("Bitte wählen: ");
 
                     int tierAuswahl = scanner.nextInt();
-
+                    if (tierAuswahl < 1 || tierAuswahl > 4) {
+                        System.out.println("Ungültige Tierart!");
+                        break;
+                    }
                     scanner.nextLine();
 
                     System.out.print("Name des Tieres: ");
+
                     String name = scanner.nextLine();
 
                     System.out.print("Alter des Tieres: ");
