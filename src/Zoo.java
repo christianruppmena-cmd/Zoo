@@ -25,4 +25,10 @@ public class Zoo {
             gehege.kurzAnzeigen();
         }
     }
+
+    void alleTiereFuettern(){
+        for (Gehege gehege : this.gehege){
+            gehege.alleTiereFuettern();
+        }
+    }
 }

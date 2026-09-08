@@ -34,4 +34,10 @@ public class Gehege {
             tier.geraeuschMachen();
         }
     }
+
+    public void alleTiereFuettern(){
+        for(Tier tier : tiere){
+            tier.fuettern();
+        }
+    }
 }

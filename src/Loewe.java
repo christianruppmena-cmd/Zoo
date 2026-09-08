@@ -6,4 +6,8 @@ public class Loewe extends Tier{
     public void geraeuschMachen(){
         System.out.println(getName() + " macht: ROAARRRR!");
     }
+    @Override
+    public void fuettern(){
+        System.out.println(getName() + " bekommt Fleisch.");
+    }
 }

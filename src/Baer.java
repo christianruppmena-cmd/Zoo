@@ -6,4 +6,8 @@ public class Baer extends Tier{
     public void geraeuschMachen(){
         System.out.println(getName() + " macht: BRUMMM!");
     }
+    @Override
+    public void fuettern(){
+        System.out.println(getName() + " bekommt Fisch.");
+    }
 }

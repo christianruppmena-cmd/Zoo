@@ -17,8 +17,9 @@ public abstract class Tier {
         System.out.println("Art: " + art);
         System.out.println("Alter: " + alter);
     }
-     public abstract void geraeuschMachen();
+    public abstract void geraeuschMachen();
 
+    public abstract void fuettern();
     // Getter und Setter
 
 

@@ -6,4 +6,8 @@ public class Affe extends Tier{
     public void geraeuschMachen(){
         System.out.println(getName() + " macht: UH UH AH AH!");
     }
+    @Override
+    public void fuettern(){
+        System.out.println(getName() + " bekommt Obst.");
+    }
 }

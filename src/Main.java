@@ -28,6 +28,9 @@ public class Main {
         zoo.gehegeHinzufuegen(baerenGehege);
 
         simba.geraeuschMachen();
+        simba.fuettern();
+
+        zoo.alleTiereFuettern();
 
         zoo.alleTiereAnzeigen();
         zoo.alleGeraeuscheMachen();
