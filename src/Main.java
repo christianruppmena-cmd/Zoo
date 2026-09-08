@@ -104,7 +104,14 @@ public class Main {
                     String name = scanner.nextLine();
 
                     System.out.print("Alter des Tieres: ");
-                    int alter = scanner.nextInt();
+                    int alter;
+                    if (scanner.hasNextInt()){
+                        alter = scanner.nextInt();
+                    }else{
+                        System.out.println("Ungültige Eingabe! Bitte eine Zahl eingeben.");
+                        scanner.nextLine();
+                        break;
+                    }
                     if (alter < 0) {
                         System.out.println("Das Alter darf nicht negativ sein!");
                         break;
