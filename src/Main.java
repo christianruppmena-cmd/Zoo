@@ -68,6 +68,7 @@ public class Main {
 
                 case 3:
                     zoo.alleGehegeAnzeigen();
+                    System.out.println("Anzahl Tiere im Zoo: " + zoo.anzahlTiere());
                     break;
 
                 case 4:

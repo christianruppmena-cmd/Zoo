@@ -26,6 +26,16 @@ public class Zoo {
         }
     }
 
+    public int anzahlTiere(){
+        int anzahl = 0;
+
+        for (Gehege gehege : this.gehege){
+            anzahl += gehege.anzahlTiere();
+        }
+        return anzahl;
+    }
+
+
     void alleTiereFuettern(){
         for (Gehege gehege : this.gehege){
             gehege.alleTiereFuettern();
