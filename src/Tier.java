@@ -45,7 +45,11 @@ public class Tier {
     }
 
     public void setAlter(int alter) {
-        this.alter = alter;
+        if (alter >= 0) {
+        this.alter = alter;}
+        else {
+            System.out.println("Alter darf nicht negativ sein!");
+        }
     }
 
     public String getGeraeusch() {

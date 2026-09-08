@@ -16,9 +16,9 @@ public class Main {
         tier3.geraeuschMachen();
         tier4.geraeuschMachen();
 
-        System.out.println(tier1.getName());
-        tier1.setName("Leo");
-        System.out.println(tier1.getName());
+        System.out.println(tier1.getAlter());
+        tier1.setAlter(-10);
+        System.out.println(tier1.getAlter());
 
 
 
