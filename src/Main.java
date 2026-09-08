@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        Loewe simba = new Loewe("Simba", 5);
+        Tier simba = new Loewe("Simba", 5);
         Elefant dumbo = new Elefant("Dumbo",12);
         Affe charly = new Affe("Charly", 4);
         Baer balu = new Baer("Balu", 7);
@@ -27,6 +27,7 @@ public class Main {
         zoo.gehegeHinzufuegen(affenGehege);
         zoo.gehegeHinzufuegen(baerenGehege);
 
+        simba.geraeuschMachen();
 
         zoo.alleTiereAnzeigen();
         zoo.alleGeraeuscheMachen();

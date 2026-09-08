@@ -2,4 +2,8 @@ public class Affe extends Tier{
     public Affe(String name, int alter){
         super(name,"Affe",alter,"UH UH AH AH!");
     }
+    @Override
+    public void geraeuschMachen(){
+        System.out.println(getName() + " macht: UH UH AH AH!");
+    }
 }
