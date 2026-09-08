@@ -17,20 +17,14 @@ public class Main {
         tier3.art = "Affe";
         tier3.alter = 4;
 
+        tier1.anzeigen();
+        tier2.anzeigen();
+        tier3.anzeigen();
 
 
 
-        System.out.println("Name: " + tier1.name);
-        System.out.println("Art: " + tier1.art);
-        System.out.println("Alter: " + tier1.alter);
 
-        System.out.println("Name: " + tier2.name);
-        System.out.println("Art: " + tier2.art);
-        System.out.println("Alter: " + tier2.alter);
 
-        System.out.println("Name: " + tier3.name);
-        System.out.println("Art: " + tier3.art);
-        System.out.println("Alter: " + tier3.alter);
 
 
     }
