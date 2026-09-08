@@ -6,7 +6,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         Tier simba = new Loewe("Simba", 5);
-        Elefant dumbo = new Elefant("Dumbo",12);
+        Elefant dumbo = new Elefant("Dumbo", 12);
         Affe charly = new Affe("Charly", 4);
         Baer balu = new Baer("Balu", 7);
 
@@ -31,13 +31,12 @@ public class Main {
         simba.fuettern();
 
 
-
         zoo.alleTiereAnzeigen();
         zoo.alleGeraeuscheMachen();
 
         int auswahl = 0;
 
-        while (auswahl !=5) {
+        while (auswahl != 6) {
             System.out.println("========================");
             System.out.println("        MEIN ZOO");
             System.out.println("========================");
@@ -45,7 +44,8 @@ public class Main {
             System.out.println("2. Alle Geräusche");
             System.out.println("3. Gehege anzeigen");
             System.out.println("4. Alle Tiere füttern");
-            System.out.println("5. Programm beenden");
+            System.out.println("5. Neues Tier hinzufügen");
+            System.out.println("6. Programm beenden");
             System.out.print("Bitte wählen: ");
 
             auswahl = scanner.nextInt();
@@ -66,8 +66,66 @@ public class Main {
                     zoo.alleTiereFuettern();
                     break;
 
-
                 case 5:
+                    System.out.println("Welche Tierart möchten Sie hinzufügen?");
+                    System.out.println("1. Löwe");
+                    System.out.println("2. Elefant");
+                    System.out.println("3. Affe");
+                    System.out.println("4. Bär");
+                    System.out.print("Bitte wählen: ");
+
+                    int tierAuswahl = scanner.nextInt();
+
+                    scanner.nextLine();
+
+                    System.out.print("Name des Tieres: ");
+                    String name = scanner.nextLine();
+
+                    System.out.print("Alter des Tieres: ");
+                    int alter = scanner.nextInt();
+
+                    Tier neuesTier;
+                    switch (tierAuswahl) {
+                        case 1:
+                            neuesTier = new Loewe(name, alter);
+                            break;
+                        case 2:
+                            neuesTier = new Elefant(name, alter);
+                            break;
+                        case 3:
+                            neuesTier = new Affe(name, alter);
+                            break;
+                        case 4:
+                            neuesTier = new Baer(name, alter);
+                            break;
+                        default:
+                            System.out.println("Ungültige Tierart");
+                            neuesTier = null;
+                    }
+
+                    if (neuesTier != null) {
+                        switch (tierAuswahl) {
+                            case 1:
+                                loewenGehege.tierHinzufuegen(neuesTier);
+                                break;
+                            case 2:
+                                elefantenGehege.tierHinzufuegen(neuesTier);
+                                break;
+                            case 3:
+                                affenGehege.tierHinzufuegen(neuesTier);
+                                break;
+                            case 4:
+                                baerenGehege.tierHinzufuegen(neuesTier);
+                                break;
+                        }
+                        System.out.println(name + " wurde zum Zoo hinzugefügt. ");
+                    }
+
+
+                    break;
+
+
+                case 6:
                     System.out.println("Zoo wird beendet.");
                     break;
 
@@ -75,8 +133,6 @@ public class Main {
                     System.out.println("Ungültige auswahl !");
             }
         }
-
-
 
 
     }
