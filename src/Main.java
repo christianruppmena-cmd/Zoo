@@ -31,29 +31,34 @@ public class Main {
         zoo.alleTiereAnzeigen();
         zoo.alleGeraeuscheMachen();
 
-        System.out.println("========================");
-        System.out.println("        MEIN ZOO");
-        System.out.println("========================");
-        System.out.println("1. Alle Tiere anzeigen");
-        System.out.println("2. Alle Geräusche");
-        System.out.println("3. Programm beenden");
-        System.out.print("Bitte wählen: ");
+        int auswahl = 0;
 
-        int auswahl = scanner.nextInt();
-        switch (auswahl) {
-            case 1 :
-                zoo.alleTiereAnzeigen();
-                break;
+        while (auswahl !=3) {
+            System.out.println("========================");
+            System.out.println("        MEIN ZOO");
+            System.out.println("========================");
+            System.out.println("1. Alle Tiere anzeigen");
+            System.out.println("2. Alle Geräusche");
+            System.out.println("3. Programm beenden");
+            System.out.print("Bitte wählen: ");
 
-            case 2 :
-                zoo.alleGeraeuscheMachen();
-                break;
+            auswahl = scanner.nextInt();
+            switch (auswahl) {
+                case 1:
+                    zoo.alleTiereAnzeigen();
+                    break;
 
-            case 3 :
-                System.out.println("Zoo wird beendet.");
+                case 2:
+                    zoo.alleGeraeuscheMachen();
+                    break;
 
-            default:
-                System.out.println("Ungültige auswahl !");
+                case 3:
+                    System.out.println("Zoo wird beendet.");
+                    break;
+
+                default:
+                    System.out.println("Ungültige auswahl !");
+            }
         }
 
 
