@@ -83,6 +83,10 @@ public class Main {
 
                     System.out.print("Alter des Tieres: ");
                     int alter = scanner.nextInt();
+                    if (alter < 0) {
+                        System.out.println("Das Alter darf nicht negativ sein!");
+                        break;
+                    }
 
                     Tier neuesTier;
                     switch (tierAuswahl) {
