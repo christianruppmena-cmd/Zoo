@@ -50,6 +50,7 @@ public class Main {
 
             if(scanner.hasNextInt()){
                 auswahl = scanner.nextInt();
+                scanner.nextLine();
             }
             else {
                 System.out.println("Ungültige Eingabe! Bitte eine Zahl eingeben.");
@@ -81,7 +82,17 @@ public class Main {
                     System.out.println("4. Bär");
                     System.out.print("Bitte wählen: ");
 
-                    int tierAuswahl = scanner.nextInt();
+                    int tierAuswahl;
+
+                    if (scanner.hasNextInt()){
+                        tierAuswahl = scanner.nextInt();
+                    }else{
+                        System.out.println("Ungültige Eingabe! Bitte eine Zahl eingeben.");
+                        scanner.nextLine();
+                        break;
+                    }
+
+
                     if (tierAuswahl < 1 || tierAuswahl > 4) {
                         System.out.println("Ungültige Tierart!");
                         break;
