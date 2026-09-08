@@ -30,21 +30,22 @@ public class Main {
         simba.geraeuschMachen();
         simba.fuettern();
 
-        zoo.alleTiereFuettern();
+
 
         zoo.alleTiereAnzeigen();
         zoo.alleGeraeuscheMachen();
 
         int auswahl = 0;
 
-        while (auswahl !=4) {
+        while (auswahl !=5) {
             System.out.println("========================");
             System.out.println("        MEIN ZOO");
             System.out.println("========================");
             System.out.println("1. Alle Tiere anzeigen");
             System.out.println("2. Alle Geräusche");
             System.out.println("3. Gehege anzeigen");
-            System.out.println("4. Programm beenden");
+            System.out.println("4. Alle Tiere füttern");
+            System.out.println("5. Programm beenden");
             System.out.print("Bitte wählen: ");
 
             auswahl = scanner.nextInt();
@@ -61,8 +62,12 @@ public class Main {
                     zoo.alleGehegeAnzeigen();
                     break;
 
-
                 case 4:
+                    zoo.alleTiereFuettern();
+                    break;
+
+
+                case 5:
                     System.out.println("Zoo wird beendet.");
                     break;
 
