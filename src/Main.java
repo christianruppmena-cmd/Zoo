@@ -48,7 +48,14 @@ public class Main {
             System.out.println("6. Programm beenden");
             System.out.print("Bitte wählen: ");
 
-            auswahl = scanner.nextInt();
+            if(scanner.hasNextInt()){
+                auswahl = scanner.nextInt();
+            }
+            else {
+                System.out.println("Ungültige Eingabe! Bitte eine Zahl eingeben.");
+                scanner.nextLine();
+                continue;
+            }
             switch (auswahl) {
                 case 1:
                     zoo.alleTiereAnzeigen();
