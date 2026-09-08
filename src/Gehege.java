@@ -16,6 +16,11 @@ public class Gehege {
     public void tierHinzufuegen(Tier tier){
         tiere.add(tier);
     }
+
+    public int anzahlTiere(){
+        return tiere.size();
+    }
+
     public void alleTiereAnzeigen(){
         for(Tier tier : tiere){
             tier.anzeigen();
@@ -24,6 +29,7 @@ public class Gehege {
 
     public void kurzAnzeigen(){
         System.out.println("Gehege: " + name);
+        System.out.println("Anzahl Tiere: " + anzahlTiere());
 
         for (Tier tier : tiere){
             System.out.println(" - " + tier.getName());
