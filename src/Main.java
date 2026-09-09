@@ -167,10 +167,12 @@ public class Main {
                     String gesuchterName = scanner.nextLine();
 
                     Tier gefundenesTier = zoo.tierSuchen(gesuchterName);
+                    Gehege gefundenesGehege = zoo.gehegeVonTier(gesuchterName);
 
                     if (gefundenesTier != null) {
                         System.out.println("Tier gefunden:");
                         gefundenesTier.anzeigen();
+                        System.out.println("Gehege: " + gefundenesGehege.getName());
                     } else {
                         System.out.println("Tier nicht gefunden.");
                     }
