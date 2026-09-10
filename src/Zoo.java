@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 
 public class Zoo {
-    ArrayList<Gehege> gehege = new ArrayList<>();
+    private ArrayList<Gehege> gehege = new ArrayList<>();
 
     void gehegeHinzufuegen(Gehege gehege){
         this.gehege.add(gehege);

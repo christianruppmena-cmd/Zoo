@@ -63,7 +63,7 @@ public class Gehege {
             Tier tier = iterator.next();
 
             if (tier.getName().equalsIgnoreCase(gesuchterName)) {
-                tiere.remove(tier);
+                iterator.remove();
                 return true;
             }
         }

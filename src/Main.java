@@ -105,7 +105,7 @@ public class Main {
                     System.out.print("Name des Tieres: ");
 
                     String name = scanner.nextLine();
-                    if(name.isEmpty()){
+                    if(name.isBlank()){
                         System.out.println("Der Name darf nicht leer sein!");
                         break;
                     }
