@@ -174,6 +174,7 @@ public class Main {
                         System.out.println("Tier gefunden:");
                         gefundenesTier.anzeigen();
                         System.out.println("Gehege: " + gefundenesGehege.getName());
+                        System.out.println("Gehege-ID: " + gefundenesGehege.getID());
                     } else {
                         System.out.println("Tier nicht gefunden.");
                     }
