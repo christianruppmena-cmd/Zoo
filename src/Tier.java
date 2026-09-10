@@ -11,7 +11,7 @@ public abstract class Tier {
 
     }
 
-    void anzeigen(){
+    public void anzeigen(){
 
         System.out.println("Name: " + name);
         System.out.println("Art: " + art);
