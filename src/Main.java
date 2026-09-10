@@ -28,6 +28,7 @@ public class Main {
     }
 
 
+
     public static void main(String[] args) {
 
 
@@ -159,26 +160,11 @@ public class Main {
                     }
 
                     Tier neuesTier = tierErstellen(tierAuswahl, name, alter);
+                    Gehege gehege = zoo.gehegeSuchen(tierAuswahl);
 
 
-                    if (neuesTier != null) {
-                        switch (tierAuswahl) {
-                            case 1:
-                                loewenGehege.tierHinzufuegen(neuesTier);
-                                break;
-                            case 2:
-                                elefantenGehege.tierHinzufuegen(neuesTier);
-                                break;
-                            case 3:
-                                affenGehege.tierHinzufuegen(neuesTier);
-                                break;
-                            case 4:
-                                baerenGehege.tierHinzufuegen(neuesTier);
-                                break;
-                            case 5:
-                                tigerGehege.tierHinzufuegen(neuesTier);
-                                break;
-                        }
+                    if (gehege != null) {
+                        gehege.tierHinzufuegen(neuesTier);
                         System.out.println(name + " wurde zum Zoo hinzugefügt. ");
                     }
 
