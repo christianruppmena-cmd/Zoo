@@ -42,11 +42,11 @@ public class Main {
 
 
 
-        Gehege loewenGehege = new Gehege("Löwengehege");
-        Gehege elefantenGehege = new Gehege("Elefantengehege");
-        Gehege affenGehege = new Gehege("Affengehege");
-        Gehege baerenGehege = new Gehege("Bärengehege");
-        Gehege tigerGehege = new Gehege("Tigergehege");
+        Gehege loewenGehege = new Gehege("Löwengehege","Löwe");
+        Gehege elefantenGehege = new Gehege("Elefantengehege","Elefant");
+        Gehege affenGehege = new Gehege("Affengehege", "Affe");
+        Gehege baerenGehege = new Gehege("Bärengehege","Bär");
+        Gehege tigerGehege = new Gehege("Tigergehege","Tiger");
 
         loewenGehege.tierHinzufuegen(simba);
         elefantenGehege.tierHinzufuegen(dumbo);

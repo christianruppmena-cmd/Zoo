@@ -8,17 +8,20 @@ public class Gehege {
     private int id;
     private String name;
     private ArrayList<Tier> tiere = new ArrayList<>();
+    private String tierArt;
 
 
-    public Gehege(String name){
+    public Gehege(String name,  String tierArt) {
         this.id = naechsteID;
         naechsteID++;
         this.name = name;
+        this.tierArt = tierArt;
     }
     public String getName(){
         return name;
     }
     public int getID(){return id;}
+    public String getTierArt(){return tierArt;}
 
     public void tierHinzufuegen(Tier tier){
         tiere.add(tier);
