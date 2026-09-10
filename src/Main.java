@@ -65,8 +65,7 @@ public class Main {
 
 
 
-        zoo.alleTiereAnzeigen();
-        zoo.alleGeraeuscheMachen();
+
 
         int auswahl = 0;
 
