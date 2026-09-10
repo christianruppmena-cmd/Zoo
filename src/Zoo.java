@@ -57,6 +57,15 @@ public class Zoo {
         return null;
     }
 
+    public boolean tierEntfernen(String gesuchterName) {
+        for (Gehege gehege : this.gehege) {
+            if (gehege.tierEntfernen(gesuchterName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     void alleTiereFuettern(){
         for (Gehege gehege : this.gehege){

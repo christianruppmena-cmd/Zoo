@@ -36,7 +36,7 @@ public class Main {
 
         int auswahl = 0;
 
-        while (auswahl != 7) {
+        while (auswahl != 8) {
             System.out.println("========================");
             System.out.println("        MEIN ZOO");
             System.out.println("========================");
@@ -46,7 +46,8 @@ public class Main {
             System.out.println("4. Alle Tiere füttern");
             System.out.println("5. Neues Tier hinzufügen");
             System.out.println("6. Tier suchen");
-            System.out.println("7. Programm beenden");
+            System.out.println("7. Tier entfernen");
+            System.out.println("8. Programm beenden");
             System.out.print("Bitte wählen: ");
 
             if(scanner.hasNextInt()){
@@ -180,6 +181,20 @@ public class Main {
                     break;
 
                 case 7:
+                    System.out.print("Welches Tier möchtest du entfernen? ");
+                    String zuEntfernenderName = scanner.nextLine();
+
+                    boolean entfernt = zoo.tierEntfernen(zuEntfernenderName);
+
+                    if (entfernt){
+                        System.out.println(zuEntfernenderName + " wurde aus dem Zoo entfernt!");
+                    }else{
+                        System.out.println("Tier nicht gefunden.");
+                    }
+                    break;
+
+
+                case 8:
                     System.out.println("Zoo wird beendet.");
                     break;
 

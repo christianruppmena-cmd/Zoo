@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Gehege {
 
@@ -54,6 +55,19 @@ public class Gehege {
         }
 
         return null;
+    }
+    public boolean tierEntfernen(String gesuchterName) {
+        Iterator<Tier> iterator = tiere.iterator();
+
+        while (iterator.hasNext()){
+            Tier tier = iterator.next();
+
+            if (tier.getName().equalsIgnoreCase(gesuchterName)) {
+                tiere.remove(tier);
+                return true;
+            }
+        }
+        return false;
     }
 
 }
