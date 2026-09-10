@@ -9,16 +9,21 @@ public class Main {
         Elefant dumbo = new Elefant("Dumbo", 12);
         Affe charly = new Affe("Charly", 4);
         Baer balu = new Baer("Balu", 7);
+        Tiger khan = new Tiger("Shere Khan", 6);
+
+
 
         Gehege loewenGehege = new Gehege("Löwengehege");
         Gehege elefantenGehege = new Gehege("Elefantengehege");
         Gehege affenGehege = new Gehege("Affengehege");
         Gehege baerenGehege = new Gehege("Bärengehege");
+        Gehege tigerGehege = new Gehege("Tigergehege");
 
         loewenGehege.tierHinzufuegen(simba);
         elefantenGehege.tierHinzufuegen(dumbo);
         affenGehege.tierHinzufuegen(charly);
         baerenGehege.tierHinzufuegen(balu);
+        tigerGehege.tierHinzufuegen(khan);
 
         Zoo zoo = new Zoo();
 
@@ -26,9 +31,9 @@ public class Main {
         zoo.gehegeHinzufuegen(elefantenGehege);
         zoo.gehegeHinzufuegen(affenGehege);
         zoo.gehegeHinzufuegen(baerenGehege);
+        zoo.gehegeHinzufuegen(tigerGehege);
 
-        simba.geraeuschMachen();
-        simba.fuettern();
+
 
 
         zoo.alleTiereAnzeigen();
@@ -83,6 +88,7 @@ public class Main {
                     System.out.println("2. Elefant");
                     System.out.println("3. Affe");
                     System.out.println("4. Bär");
+                    System.out.println("5. Tiger");
                     System.out.print("Bitte wählen: ");
 
                     int tierAuswahl;
@@ -96,7 +102,7 @@ public class Main {
                     }
 
 
-                    if (tierAuswahl < 1 || tierAuswahl > 4) {
+                    if (tierAuswahl < 1 || tierAuswahl > 5) {
                         System.out.println("Ungültige Tierart!");
                         break;
                     }
@@ -138,6 +144,9 @@ public class Main {
                         case 4:
                             neuesTier = new Baer(name, alter);
                             break;
+                        case 5:
+                            neuesTier = new Tiger(name, alter);
+                            break;
                         default:
                             System.out.println("Ungültige Tierart");
                             neuesTier = null;
@@ -156,6 +165,9 @@ public class Main {
                                 break;
                             case 4:
                                 baerenGehege.tierHinzufuegen(neuesTier);
+                                break;
+                            case 5:
+                                tigerGehege.tierHinzufuegen(neuesTier);
                                 break;
                         }
                         System.out.println(name + " wurde zum Zoo hinzugefügt. ");
