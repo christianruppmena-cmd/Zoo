@@ -3,16 +3,22 @@ import java.util.Iterator;
 
 public class Gehege {
 
+    private static int naechsteID = 1;
+
+    private int id;
     private String name;
     private ArrayList<Tier> tiere = new ArrayList<>();
 
 
     public Gehege(String name){
+        this.id = naechsteID;
+        naechsteID++;
         this.name = name;
     }
     public String getName(){
         return name;
     }
+    public int getID(){return id;}
 
     public void tierHinzufuegen(Tier tier){
         tiere.add(tier);
@@ -29,7 +35,7 @@ public class Gehege {
     }
 
     public void kurzAnzeigen(){
-        System.out.println("Gehege: " + name);
+        System.out.println("Gehege "+ id +" : " + name);
         System.out.println("Anzahl Tiere: " + anzahlTiere());
 
         for (Tier tier : tiere){
