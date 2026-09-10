@@ -2,10 +2,38 @@ import java.util.Scanner;
 
 
 public class Main {
+    public static Tier tierErstellen(int tierAuswahl, String name, int alter){
+        Tier neuesTier;
+        switch (tierAuswahl){
+            case 1 :
+                neuesTier = new Loewe(name, alter);
+                break;
+            case 2:
+                neuesTier = new Elefant(name, alter);
+                break;
+            case 3:
+                neuesTier = new Affe(name, alter);
+                break;
+            case 4:
+                neuesTier = new Baer(name, alter);
+                break;
+            case 5:
+                neuesTier = new Tiger(name, alter);
+                break;
+            default:
+                System.out.println("Ungültige Tierart");
+                neuesTier = null;
+        }
+        return neuesTier;
+    }
+
+
     public static void main(String[] args) {
+
+
         Scanner scanner = new Scanner(System.in);
 
-        Tier simba = new Loewe("Simba", 5);
+        Loewe simba = new Loewe("Simba", 5);
         Elefant dumbo = new Elefant("Dumbo", 12);
         Affe charly = new Affe("Charly", 4);
         Baer balu = new Baer("Balu", 7);
@@ -130,27 +158,8 @@ public class Main {
                         break;
                     }
 
-                    Tier neuesTier;
-                    switch (tierAuswahl) {
-                        case 1:
-                            neuesTier = new Loewe(name, alter);
-                            break;
-                        case 2:
-                            neuesTier = new Elefant(name, alter);
-                            break;
-                        case 3:
-                            neuesTier = new Affe(name, alter);
-                            break;
-                        case 4:
-                            neuesTier = new Baer(name, alter);
-                            break;
-                        case 5:
-                            neuesTier = new Tiger(name, alter);
-                            break;
-                        default:
-                            System.out.println("Ungültige Tierart");
-                            neuesTier = null;
-                    }
+                    Tier neuesTier = tierErstellen(tierAuswahl, name, alter);
+
 
                     if (neuesTier != null) {
                         switch (tierAuswahl) {
