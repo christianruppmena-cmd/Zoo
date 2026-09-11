@@ -24,7 +24,12 @@ public class Gehege {
     public String getTierArt(){return tierArt;}
 
     public void tierHinzufuegen(Tier tier){
-        tiere.add(tier);
+        if(passtZuTier(tier)){
+            tiere.add(tier);
+        }else{
+            System.out.println("Diese Tier gehört nicht in dieses Gehege!");
+        }
+
     }
 
     public int anzahlTiere(){

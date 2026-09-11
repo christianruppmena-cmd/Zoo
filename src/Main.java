@@ -65,7 +65,6 @@ public class Main {
 
 
 
-
         int auswahl = 0;
 
         while (auswahl != 8) {
