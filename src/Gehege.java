@@ -78,5 +78,12 @@ public class Gehege {
         }
         return false;
     }
+    public boolean passtZuTier(Tier tier){
+        if(tier.getArt().equals(getTierArt())){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 }

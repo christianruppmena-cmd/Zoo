@@ -66,7 +66,6 @@ public class Main {
 
 
 
-
         int auswahl = 0;
 
         while (auswahl != 8) {
@@ -159,7 +158,7 @@ public class Main {
                     }
 
                     Tier neuesTier = tierErstellen(tierAuswahl, name, alter);
-                    Gehege gehege = zoo.gehegeSuchen(tierAuswahl);
+                    Gehege gehege = zoo.gehegeVonTier(neuesTier);
 
 
                     if (gehege != null) {

@@ -56,6 +56,14 @@ public class Zoo {
         }
         return null;
     }
+    public Gehege gehegeVonTier(Tier tier){
+        for(Gehege gehege : this.gehege) {
+            if(gehege.passtZuTier(tier)){
+                return gehege;
+            }
+        }
+        return null;
+    }
 
     public boolean tierEntfernen(String gesuchterName) {
         for (Gehege gehege : this.gehege) {
