@@ -7,7 +7,7 @@ public abstract class Tier {
     public Tier(String name, String art, int alter){
         this.name = name;
         this.art = art;
-        this.alter = alter;
+        setAlter(alter);
 
     }
 

@@ -62,7 +62,7 @@ public class Main {
         zoo.gehegeHinzufuegen(baerenGehege);
         zoo.gehegeHinzufuegen(tigerGehege);
 
-
+        
 
 
         int auswahl = 0;
