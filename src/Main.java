@@ -1,3 +1,5 @@
+import java.io.File;
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 
@@ -62,12 +64,12 @@ public class Main {
         zoo.gehegeHinzufuegen(baerenGehege);
         zoo.gehegeHinzufuegen(tigerGehege);
 
-        
+
 
 
         int auswahl = 0;
 
-        while (auswahl != 8) {
+        while (auswahl != 9) {
             System.out.println("========================");
             System.out.println("        MEIN ZOO");
             System.out.println("========================");
@@ -78,7 +80,8 @@ public class Main {
             System.out.println("5. Neues Tier hinzufügen");
             System.out.println("6. Tier suchen");
             System.out.println("7. Tier entfernen");
-            System.out.println("8. Programm beenden");
+            System.out.println("8. Tier umbenennen");
+            System.out.println("9. Programm beenden");
             System.out.print("Bitte wählen: ");
 
             if(scanner.hasNextInt()){
@@ -200,6 +203,25 @@ public class Main {
 
 
                 case 8:
+                    System.out.print("Welches Tier möchten Sie umbenennen ? ");
+                    String alterName = scanner.nextLine();
+
+                    Tier tierZumUmbenennen = zoo.tierSuchen(alterName);
+
+                    if(tierZumUmbenennen != null){
+                        System.out.print("Neuer Name: ");
+                        String neuerName = scanner.nextLine();
+                        if(neuerName.isBlank()){
+                            System.out.println("Der Name darf nicht leer sein!");
+                            break;
+                        }
+                        tierZumUmbenennen.setName(neuerName);
+                    }
+                    break;
+
+
+
+                case 9:
                     System.out.println("Zoo wird beendet.");
                     break;
 
