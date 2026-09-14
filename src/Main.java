@@ -216,6 +216,8 @@ public class Main {
                             break;
                         }
                         tierZumUmbenennen.setName(neuerName);
+                    }else{
+                        System.out.println("Tier nicht gefunden.");
                     }
                     break;
 
