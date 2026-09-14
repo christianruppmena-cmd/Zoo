@@ -122,6 +122,11 @@ public class Main {
                             Gehege gefundenesGehege = zoo.gehegeSuchenNachId(gehegeID);
                             if(gefundenesGehege != null){
                                 System.out.println("Gehege gefunden: ");
+                                System.out.println("Gehege-ID: " + gefundenesGehege.getID());
+                                System.out.println("Name: " + gefundenesGehege.getName());
+                                System.out.println("Tierart: " + gefundenesGehege.getTierArt());
+                                System.out.println("Anzahl Tiere: " + gefundenesGehege.anzahlTiere());
+                                System.out.println();
                                 gefundenesGehege.alleTiereAnzeigen();
                             }else{
                                 System.out.println("Gehege nicht gefunden.");
