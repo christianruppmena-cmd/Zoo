@@ -125,8 +125,17 @@ public class Main {
                         case 2:
                             // bestimmtes Gehege
                             System.out.print("Welche Gehege-ID möchtest du anzeigen? ");
-                            int gehegeID = scanner.nextInt();
-                            scanner.nextLine();
+
+                            int gehegeID;
+
+                            if (scanner.hasNextInt()) {
+                                gehegeID = scanner.nextInt();
+                                scanner.nextLine();
+                            } else {
+                                System.out.println("Ungültige Eingabe! Bitte eine Zahl eingeben.");
+                                scanner.nextLine();
+                                break;
+                            }
                             Gehege gefundenesGehege = zoo.gehegeSuchenNachId(gehegeID);
                             if(gefundenesGehege != null){
                                 System.out.println("Gehege gefunden: ");
