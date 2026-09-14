@@ -80,14 +80,7 @@ public class Zoo {
             gehege.alleTiereFuettern();
         }
     }
-    public Gehege gehegeSuchen(int id){
-        for (Gehege gehege : this.gehege){
-            if(gehege.getID() == id){
-                return gehege;
-            }
-        }
-        return null;
-    }
+
     public Gehege gehegeSuchenNachId(int id){
         for (Gehege gehege : this.gehege) {
             if(gehege.getID() == id){
