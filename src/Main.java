@@ -103,8 +103,37 @@ public class Main {
                     break;
 
                 case 3:
-                    zoo.alleGehegeAnzeigen();
-                    System.out.println("Anzahl Tiere im Zoo: " + zoo.anzahlTiere());
+                    System.out.println("1. Alle Gehege anzeigen");
+                    System.out.println("2. Bestimmtes Gehege anzeigen");
+                    int gehegeAuswahl = scanner.nextInt();
+                    scanner.nextLine();
+
+                    switch (gehegeAuswahl) {
+                        case 1:
+                            // alle Gehege
+                            zoo.alleGehegeAnzeigen();
+                            System.out.println("Anzahl Tiere im Zoo: " + zoo.anzahlTiere());
+                            break;
+                        case 2:
+                            // bestimmtes Gehege
+                            System.out.print("Welche Gehege-ID möchtest du anzeigen? ");
+                            int gehegeID = scanner.nextInt();
+                            scanner.nextLine();
+                            Gehege gefundenesGehege = zoo.gehegeSuchenNachId(gehegeID);
+                            if(gefundenesGehege != null){
+                                System.out.println("Gehege gefunden: ");
+                                gefundenesGehege.alleTiereAnzeigen();
+                            }else{
+                                System.out.println("Gehege nicht gefunden.");
+                            }
+                            break;
+
+                        default:
+                            System.out.println("Ungültige Auswahl! ");
+                    }
+
+
+
                     break;
 
                 case 4:
