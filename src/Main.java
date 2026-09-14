@@ -105,8 +105,16 @@ public class Main {
                 case 3:
                     System.out.println("1. Alle Gehege anzeigen");
                     System.out.println("2. Bestimmtes Gehege anzeigen");
-                    int gehegeAuswahl = scanner.nextInt();
-                    scanner.nextLine();
+                    int gehegeAuswahl;
+
+                    if (scanner.hasNextInt()) {
+                        gehegeAuswahl = scanner.nextInt();
+                        scanner.nextLine();
+                    } else {
+                        System.out.println("Ungültige Eingabe! Bitte eine Zahl eingeben.");
+                        scanner.nextLine();
+                        break;
+                    }
 
                     switch (gehegeAuswahl) {
                         case 1:
